@@ -9,7 +9,7 @@ html {
     background-color: hsl(0, 0%, 100%);
     width: 100vw;
     height: 100vh;
-    background: url(./images/bg-pattern-top-mobile.svg) left 0px no-repeat, url(./images/bg-pattern-bottom-mobile.svg) right 600px no-repeat;
+    
 }
 
 #content {
@@ -17,10 +17,10 @@ html {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    background: url(./images/bg-pattern-top-mobile.svg) left 0px no-repeat, url(./images/bg-pattern-bottom-mobile.svg) right 600px no-repeat;
 }
 
 header h1 {
-    
     color: hsl(300, 43%, 22%);
     margin: 70px 50px 20px;
     line-height: 30px;
@@ -37,6 +37,7 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto 20px;
+    align-items: center;
 }
 
 .rating {
@@ -68,14 +69,15 @@ header h1 {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
+    align-items: center;
 }
 
 .feedback {
     width: 320px;
-    min-height: 170px;
+    height: 180px;
     background-color: hsl(300, 43%, 22%);
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .person {
@@ -112,4 +114,83 @@ header h1 {
     color: hsl(300, 24%, 96%);
     margin: auto 35px 30px;
     font-size: 12px;
+}
+
+@media (min-width: 801px) {
+    
+    html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content {
+        background: url(./images/bg-pattern-top-desktop.svg) left top no-repeat, url(./images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+        display: flex;
+        flex-direction: column;
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    header h1{
+        text-align: left;
+        font-size: 42px;
+        line-height: normal;
+        width:400px;
+        
+    }
+
+    #description {
+        width: 400px;
+        text-align: left;
+        font-size: 15px;
+        margin-left: 50px;
+    }
+
+    #ratings {
+        flex-direction: column;
+    }
+
+    .rating:nth-child(2) {
+        margin-left: 60px;
+    }
+    .rating:nth-child(3) {
+        margin-left: 120px;
+    }
+
+    .rating {
+        flex-direction: row;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        padding-right: 40px;
+    }
+
+    .stars {
+        margin-top: 90px;
+    }
+
+    .rating-text {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    #feedbacks {
+        flex-direction: row;
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .feedback {
+        margin-right: 10px;
+    }
+    .feedback:nth-child(2){
+        margin-top: 30px;
+    }
+    .feedback:last-child {
+        margin-top: 50px;
+    }
 }
